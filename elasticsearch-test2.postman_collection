@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "1be8382c-1a46-4369-9072-72e9c5bf40df",
+		"name": "elasticsearch-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9200",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Joan Elastic Test 2\",\r\n    \"lastname\" : \"Doe\",\r\n    \"job_description\" : \"Systems administrator and Linux specialit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9200/accounts/person/",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Index",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Joan Elastic Test 2\",\r\n    \"lastname\" : \"Doe\",\r\n    \"job_description\" : \"Systems administrator and Linux specialit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9200/accounts/person/",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Lizzeth\",\r\n    \"lastname\" : \"Velarde\",\r\n    \"job_description\" : \"Administrator\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9200/accounts/person/",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving All Coincidences",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9200/_search?q=Joan",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Joan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating a Document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Joan\",\r\n    \"lastname\" : \"Perez Alvarado\",\r\n    \"job_description\" : \"Systems administrator and Linux specialist\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9200/accounts/person/vsrr6G8BAALh_1-4sgJv",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"vsrr6G8BAALh_1-4sgJv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving Into Index -> All Coincidences",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9200/accounts/_search?q=Joan",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Joan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Joan\",\r\n    \"lastname\" : \"Perez Alvarado\",\r\n    \"job_description\" : \"Systems administrator and Linux specialit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9200/accounts/person/vsrr6G8BAALh_1-4sgJv",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"vsrr6G8BAALh_1-4sgJv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving Into Index / Typo All Coincidences",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9200/accounts/person/_search?q=Joan",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Joan"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
